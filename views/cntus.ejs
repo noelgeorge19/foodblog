@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        background-color: rgb(183, 107, 255);
+    }
+    h1{
+        font-size: 60px;
+        font-family: northwell;
+    }
+    div{
+        display: inline-block;
+
+    }
+    .li1{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 30px;
+        
+    }
+    @font-face {
+    font-family: northwell;
+    src: url("./fonts/Northwell-Alt.ttf");
+}
+</style>
+<body>
+    
+   <center><h1>PEOPLE WHO HAVE CONTACTED</h1></center> 
+   <div>
+    <ol>
+        <% contactus.forEach(function(cont){ %>
+            <li style="display: inline-block;padding: 20px;" class="li1"><%= cont.name %>
+            <ul style="font-family: Georgia, 'Times New Roman', Times, serif;font-size: medium;">
+                <% Object.keys(cont).forEach(function(key){ %>
+                    <li class="li2"><strong><%= key %></strong>: <%= cont[key] %></li>
+                <%  }); %>
+        
+                </ul>
+        </li>
+        <% }); %>
+    </ol>
+</div>
+</body>
+</html>

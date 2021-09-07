@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        background-color: rgb(123, 100, 255);
+    }
+    h1{
+        font-size: 60px;
+        font-family: northwell;
+    }
+    div{
+        display: inline-block;
+        
+        border-radius: 10px;
+
+    }
+    .li1{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 30px;
+        
+    }
+    @font-face {
+    font-family: northwell;
+    src: url("./fonts/Northwell-Alt.ttf");
+}
+</style>
+<body>
+    
+   <center><h1>PEOPLE WHO HAVE REGISTERED</h1></center> 
+   <div>
+    <ol>
+        <% registereds.forEach(function(reg){ %>
+            <li style="display: inline-block;padding: 20px;" class="li1"><%= reg.name %>
+            <ul style="font-family: Georgia, 'Times New Roman', Times, serif;font-size: medium;">
+                <% Object.keys(reg).forEach(function(key){ %>
+                    <li class="li2"><strong><%= key %></strong>: <%= reg[key] %></li>
+                <%  }); %>
+        
+                </ul>
+        </li>
+        <% }); %>
+    </ol>
+</div>
+</body>
+</html>

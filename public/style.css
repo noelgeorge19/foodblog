@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.navbar-brand{
+    font-size: 3rem;
+    color: black;
+    
+    font-family: 'Lobster', cursive;
+
+}
+.navbar-brand:hover{
+    color: blue;
+}
+.nav-link{
+    font-size: 1.3rem;
+    font-family: 'Rubik', sans-serif;
+    margin-right: 10px;
+    margin-left: 10px;
+    color: black;
+    text-transform: uppercase;
+}
+.nav-link:hover{
+    color: black;
+}
+.main{
+    background: url("./images/background.jpg");
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    background-position: 50% 50%;
+}
+.main h1{
+    font-size: 4rem;
+    font-weight: 700;
+    font-family: 'Oswald', sans-serif;
+    color: blanchedalmond;
+}
+.btn1{
+    height: 45px;
+    width: 35%;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: white;
+    font-weight: 700;
+    border-radius: 40px;
+
+}
+
+.container2{
+    border-radius: 30px;
+    width: 1100px;
+    min-height: 500px;
+    background: black;
+    margin: 20px auto 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.container2 .img-luid{
+    height: 400px;
+    width: 400px;
+    position: relative;
+    background: blue;
+    margin: 70px;
+    margin-bottom: 100px;
+    box-sizing: border-box;
+    display: inline-block;
+}
+.container2 .img-luid .imgBox{
+    position: relative;
+    overflow: hidden;
+}
+.container2 .img-luid .imgBox img{
+width: 400px;
+height: 400px;
+transition: trasform 2s;
+}
+.container2 .img-luid:hover .imgBox img{
+    transform: scale(1.2);
+}
+.container2 .img-luid .details{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    transform: scaleY(0);
+    transition: transform 0.5s;
+}
+.container2 .img-luid:hover .details{
+    transform: scaleY(1);
+
+}
+.container2 .img-luid .details .content{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    padding: 15px;
+    color: #fff;
+}
+.container2 .img-luid .details .content h2{
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+    color: #ff0;
+}
+.container2 .img-luid .details .content p{
+    margin: 10 0 0;
+    padding: 0;
+    font-size: 15px;
+    color: #ff0;
+}
+@font-face {
+    font-family: northwell;
+    src: url("./fonts/Northwell-Alt.ttf");
+}
+.container2 .img-luid h2{
+    padding-top: 10px;
+    font-family: northwell;
+    font-size: 60px;
+    color: burlywood;
+}
